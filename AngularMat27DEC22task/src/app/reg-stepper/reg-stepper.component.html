@@ -1,0 +1,154 @@
+
+  <mat-stepper  #stepper>
+
+    <div class="abc">
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Basic information</ng-template>
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Last name, First name" formControlName="name" required>
+          <mat-icon matSuffix>person</mat-icon>
+        </mat-form-field>
+        &nbsp;&nbsp;
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Email" formControlName="email" type="email" required>
+          <mat-icon matSuffix>email</mat-icon>
+        </mat-form-field>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Father's Name</mat-label>
+          <input matInput placeholder="Last name, First name" formControlName="fname" required>
+          <mat-icon matSuffix>face</mat-icon>
+        </mat-form-field>
+        &nbsp;&nbsp;
+        <mat-form-field appearance="fill">
+          <mat-label>Mother's Name</mat-label>
+          <input matInput placeholder="Last name, First name" formControlName="mname" required>
+          <mat-icon matSuffix>face_3</mat-icon>
+        </mat-form-field>
+
+        <br>
+
+        <mat-radio-group aria-label="Select an option" formControlName="gdr" required>
+          <mat-radio-button value="M"><mat-icon>male</mat-icon></mat-radio-button>
+          <mat-radio-button value="F"><mat-icon>female</mat-icon></mat-radio-button>
+          <mat-error></mat-error>
+        </mat-radio-group>
+
+        <br>
+
+        <mat-form-field appearance="fill">
+          <mat-label>DOB</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="dob">
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+
+        &nbsp;&nbsp;
+        <mat-form-field appearance="fill">
+          <mat-label>Mobile Number</mat-label>
+          <input matInput placeholder="Enter Your Number" formControlName="mobile" type="number" required>
+          <mat-icon matSuffix>phone</mat-icon>
+        </mat-form-field>
+        <div>
+          <button mat-raised-button matStepperNext color="primary">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+    <mat-step [stepControl]="secondFormGroup" label="Bank Details" optional>
+      <form [formGroup]="secondFormGroup">
+        
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Bank Account Number</mat-label>
+              <input matInput placeholder="Account Number" type="number" formControlName="accno">
+              <mat-icon matSuffix>account_balance</mat-icon>
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>Bank Name</mat-label>
+              <input matInput placeholder="Bank Name" formControlName="bankname">
+              <mat-icon matSuffix>account_balance_wallet</mat-icon>
+            </mat-form-field>
+          </div>
+
+          <div>
+            <mat-form-field appearance="fill">
+              <mat-label>IFSC Code</mat-label>
+              <input matInput placeholder="IFSC" formControlName="ifsc">
+            </mat-form-field>
+          </div>
+
+
+          <div>
+            <mat-radio-group aria-label="You have internet banking" formControlName="ibanking">
+              Inernet Banking <mat-radio-button value="Y">Yes</mat-radio-button>
+              <mat-radio-button value="N">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+
+          <div>
+            <mat-radio-group aria-label="You have Mobile banking" formControlName="mbanking">
+              Mobile Banking <mat-radio-button value="Y">Yes</mat-radio-button>
+              <mat-radio-button value="N">No</mat-radio-button>
+            </mat-radio-group>
+          </div>
+
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-raised-button matStepperNext color="primary">Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+    <mat-step [stepControl]="thirdFormGroup">
+      <ng-template matStepLabel>Communication Address</ng-template>
+      <form [formGroup]="thirdFormGroup">
+      <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Present Address</mat-label>
+          <input matInput placeholder="Enter Address" formControlName="pradd">
+          <mat-icon matSuffix>home</mat-icon>
+          <mat-error></mat-error>
+        </mat-form-field>
+        <br>
+        <span *ngIf="remainingp>=0">Word Count = {{remainingp}}</span>
+        <span style="color:red" *ngIf="remainingp<=-1">word limit exceeds</span>
+      </p>
+
+      <p>
+        <mat-form-field appearance="fill">
+          <mat-label>Permanent Address</mat-label>
+          <input matInput placeholder="Enter Address" formControlName="permanentadd">
+          <mat-icon matSuffix>home</mat-icon>
+          <mat-error></mat-error>
+        </mat-form-field>
+        <br>
+        <span *ngIf="remainingm>=0">Word Count = {{remainingm}}</span>
+        <span style="color:red" *ngIf="remainingm<=-1">word limit exceeds</span>
+      </p>
+
+   
+
+  
+  
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-raised-button (click)="submit()" color="primary">Submit</button>
+      </div>
+    </form>
+    
+    </mat-step>
+</div>
+  </mat-stepper>
+  

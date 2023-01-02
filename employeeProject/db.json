@@ -1,0 +1,53 @@
+{
+  "getAllEmployees": [
+    {
+      "id": 2,
+      "name": " Kumar",
+      "basic": 12899,
+      "deptNo": 20,
+      "address": " HYD"
+    },
+    {
+      "id": 3,
+      "name": "Vijay",
+      "basic": 50000,
+      "deptNo": 30,
+      "address": " HYD"
+    },
+    {
+      "id": 1,
+      "name": "RAJA",
+      "basic": 27700,
+      "deptNo": 10,
+      "address": " HYD"
+    },
+    {
+      "id": 10,
+      "name": "Suresh",
+      "basic": 12340,
+      "deptNo": 10,
+      "address": " HYD"
+    },
+    {
+      "id": 5,
+      "name": "Rahul",
+      "basic": 20000,
+      "deptNo": 54,
+      "address": " HYD"
+    },
+    {
+      "id": 6,
+      "name": "Buvan",
+      "basic": 1000000,
+      "deptNo": 1,
+      "address": " HYD"
+    },
+    {
+      "id": 7,
+      "name": "Pavan",
+      "basic": 30000,
+      "deptNo": 4,
+      "address": "SEC"
+    }
+  ]
+}

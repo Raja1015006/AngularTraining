@@ -1,0 +1,71 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "saveData": [
+    {
+      "name": "Raj",
+      "email": "Abc@gmail.com",
+      "fname": "Papa",
+      "mname": "Mummy",
+      "gdr": "M",
+      "dob": "19823-01-16T18:30:00.000Z",
+      "mobile": 9409140470,
+      "accno": 17817187171871,
+      "bankname": "BOI",
+      "ifsc": "BKID187181",
+      "ibanking": "Y",
+      "mbanking": "N",
+      "pradd": "175 Ujjain  nagarkot",
+      "id": 1
+    },
+    {
+      "name": "Raja",
+      "email": "j@gmail.com",
+      "fname": "Ram",
+      "mname": "Lakshmi",
+      "gdr": "M",
+      "dob": "1984-05-04T18:30:00.000Z",
+      "mobile": 6791919199,
+      "accno": 72182787878,
+      "bankname": "BOI",
+      "ifsc": "BKID000",
+      "ibanking": "N",
+      "mbanking": "Y",
+      "pradd": "Ujjain",
+      "permanentadd": "Ujjain",
+      "id": 2
+    },
+    {
+      "name": "Raja",
+      "email": "kumarraja.tikkisetti@yash.com",
+      "fname": "Rama",
+      "mname": "Lakshmi",
+      "gdr": "M",
+      "dob": "1982-04-18T18:30:00.000Z",
+      "mobile": 9441212376,
+      "accno": 123456,
+      "bankname": "HDFC",
+      "ifsc": "HDFC0012",
+      "ibanking": "Y",
+      "mbanking": "Y",
+      "pradd": "HYD",
+      "permanentadd": "MTM",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
